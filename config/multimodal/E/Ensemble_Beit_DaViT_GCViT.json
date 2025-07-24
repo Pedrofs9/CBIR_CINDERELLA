@@ -1,0 +1,31 @@
+{
+    "model_name": "Multimodal_Ensemble_Beit_DaViT_GCViT_Tabular",
+    "model_names": [
+        "Beit_Base_Patch16_224",
+        "DaViT_Base",
+        "GC_ViT_224"
+    ],
+    "tabular_model_name": "TabularMLP_773_200_20",
+
+    "checkpoint_paths": [
+        "results/2025-03-26_11-54-19/bin/model_final.pt",
+        "results/2025-03-31_12-37-04/bin/model_final.pt",
+        "results/2025-04-04_16-17-02/bin/model_final.pt",
+    ],
+    "trainable": true,
+    "tabular_input_dim": 773,
+    "tabular_hidden_dim": 200,
+    "tabular_output_dim": 20,
+    "lr": 1e-5,
+    "num_epochs": 50,
+    "model_lrs": [0.000005, 0.0001, 0.00001, 0.0001],
+    "batch_size": 16,
+    "catalogue_type": "E",
+    "margin": 0.01,
+    "seed": 10,
+    "split_ratio": 0.8,
+    "doctor_code": -1,
+    "fusion_type": "projection",
+    "mlp_dims": [512, 256],
+    "use_l2_norm": true
+}
